@@ -1,0 +1,15 @@
+type Course {
+  _id: ID!
+  title: String
+  teacher: String
+  description: String
+  topic: String
+}
+
+type Query {
+  "Retorna un areglo de todos los cursos"
+  getCourses: [Course]
+
+  "Retorna un curso"
+  getCourse(id: ID!): Course
+}

@@ -1,0 +1,24 @@
+{
+  "name": "graphql_basico",
+  "version": "1.0.0",
+  "description": "Proyecto de inicio con GraphQL",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon -e js,graphql server",
+    "lint": "standard",
+    "lint-fix": "standard --fix"
+  },
+  "author": "Angel Hernandez",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "express-graphql": "^0.8.0",
+    "graphql": "^14.3.1",
+    "graphql-tools": "^4.0.4",
+    "mongoose": "^5.5.15"
+  },
+  "devDependencies": {
+    "standard": "^12.0.1"
+  }
+}
