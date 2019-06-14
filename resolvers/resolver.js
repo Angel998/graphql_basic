@@ -1,36 +1,15 @@
-const courses = [
-  {
-    _id: '121',
-    title: 'Primer titulo',
-    teacher: 'Angel Hernandez',
-    description: 'Este es el primer curso',
-    topic: 'mate'
-  },
-  {
-    _id: '111',
-    title: 'Segundo titulo',
-    teacher: 'Angel Hernandez',
-    description: 'Este es el primer curso',
-    topic: 'mate'
-  },
-  {
-    _id: '222',
-    title: 'Tercero titulo',
-    teacher: 'Angel Hernandez',
-    description: 'Este es el primer curso',
-    topic: 'mate'
-  }
-];
+const { getCourses, getCourse } = require('../actions/courseActions');
 
 module.exports = {
   Query: {
-    getCourses: () => {
-      return courses;
+    getCourses: async () => {
+      const response = await getCourses();
+      return response.data;
     },
-    getCourse: (root, args) => {
+    getCourse: async (_, args) => {
       const { id } = args;
-      const course = courses.find(c => c._id === id);
-      return course;
+      const response = await getCourse(id);
+      return response.data;
     }
   }
 };
