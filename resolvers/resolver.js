@@ -53,5 +53,8 @@ module.exports = {
       const response = await addPeopleToCourse(id_course, id_person);
       return response.data;
     }
+  },
+  GlobalSearch: {
+    __resolveType: (item, context, info) => {}
   }
 };

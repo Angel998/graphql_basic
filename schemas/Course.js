@@ -20,6 +20,9 @@ const CourseSchema = mongoose.Schema({
   people: {
     type: ["Student"],
     default: []
+  },
+  level: {
+    type: String
   }
 });
 
